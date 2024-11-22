@@ -1,0 +1,31 @@
+:root {
+  /* Farben */
+  --color-red: #c73b0f;
+  --color-green: #1ea575;
+
+  --color-rose-900: #260f08;
+  --color-rose-500: #87635a;
+  --color-rose-400: #ad8a85;
+  --color-rose-300: #caafa7;
+  --color-rose-100: #f5eeec;
+  --color-rose-50: #fcf8f6;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Schriftgröße */
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2.5rem;
+
+  /* Schrifthöhe */
+  --line-height-120: 1.2;
+  --line-height-125: 1.25;
+  --line-height-150: 1.5;
+
+  /* Gewichte */
+  --font-weight-regular: 400;
+  --font-weight-semiBold: 600;
+  --font-weight-bold: 700;
+}

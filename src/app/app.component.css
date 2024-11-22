@@ -1,0 +1,32 @@
+.layout {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 2rem 1.5rem;
+
+  @media (min-width: 1050px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.cart {
+  min-width: 384px;
+  height: fit-content;
+  background-color: var(--color-white);
+  border-radius: 12px;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  padding: 1.5rem;
+
+  @media (min-width: 1050px) {
+    flex-grow: 0;
+  }
+}
+
+.desserts {
+  flex-basis: auto;
+  flex-grow: 1;
+}

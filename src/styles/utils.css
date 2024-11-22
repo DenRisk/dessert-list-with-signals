@@ -1,0 +1,34 @@
+.container {
+  max-width: 1272px;
+  margin-inline: auto;
+  padding: 5rem clamp(0.5rem, 5vw, 2rem);
+}
+
+.text-preset-1 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-120);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-2 {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-125);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-3 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-150);
+  font-weight: var(--font-weight-semiBold);
+}
+
+.text-preset-4 {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-150);
+}
+
+.text-preset-4-bold {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-150);
+  font-weight: var(--font-weight-semiBold);
+}

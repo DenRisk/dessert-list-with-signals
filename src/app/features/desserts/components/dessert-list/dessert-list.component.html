@@ -1,0 +1,7 @@
+<div class="items">
+  @if (dessertsWithQuantity().length) {
+    @for (dessert of dessertsWithQuantity(); track dessert.name) {
+      <app-dessert-list-item [dessert]="dessert"></app-dessert-list-item>
+    }
+  }
+</div>
