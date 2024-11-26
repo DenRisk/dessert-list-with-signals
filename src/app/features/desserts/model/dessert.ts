@@ -10,4 +10,5 @@ export  type Dessert = {
   category: string;
   price: number;
   quantity: number;
+  totalPrice: number;
 };

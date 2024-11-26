@@ -1,1 +1,7 @@
-<p>cart-list works!</p>
+<div class="cart-list">
+  @if (cartEntries) {
+    @for (entry of cartEntries(); track entry.id) {
+      <app-cart-list-item [dessert]="entry"></app-cart-list-item>
+    }
+  }
+</div>

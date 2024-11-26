@@ -1,9 +1,9 @@
 @if (dessert) {
   @if (dessert.quantity) {
     <div class="add-cart add-cart--counter">
-      <app-count-btn countType="Decrement"></app-count-btn>
+      <app-count-btn countType="Decrement" (onCountChange)="handleCountChange('Decrement')"></app-count-btn>
       <span>{{ dessert.quantity }}</span>
-      <app-count-btn countType="Increment"></app-count-btn>
+      <app-count-btn countType="Increment" (onCountChange)="handleCountChange('Increment')"></app-count-btn>
     </div>
   } @else {
     <div class="add-cart add-cart--default" (click)="addEntryToCart(dessert)">

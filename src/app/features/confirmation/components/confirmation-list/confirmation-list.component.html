@@ -1,0 +1,13 @@
+<div class="confirmation-list">
+  @if (cartEntries) {
+    @for (entry of cartEntries(); track entry.id) {
+      <app-confirmation-list-item [dessert]="entry"></app-confirmation-list-item>
+    }
+  }
+  @if (cartTotal) {
+    <div class="order-total">
+      <span>Order Total</span>
+      <span class="text-preset-2">{{ cartTotal() | priceFormat }} </span>
+    </div>
+  }
+</div>

@@ -14,10 +14,7 @@ import {CountBtnComponent} from '../count-btn/count-btn.component'
 })
 export class AddCartBtnComponent {
   cartService = inject(CartService);
-
   @Input({required: true}) dessert: Dessert | undefined;
-
-  countSignal = signal<'Increment' | 'Decrement'>('Increment');
 
   handleCountChange = (countType: 'Increment' | 'Decrement') => {
     if (countType === 'Increment') {

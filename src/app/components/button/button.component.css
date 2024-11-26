@@ -1,0 +1,19 @@
+/* Standardbutton-Styling */
+button {
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+button.primary {
+  background-color: var(--color-red);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-red-hover);
+  }
+}
+

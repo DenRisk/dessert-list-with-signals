@@ -1,0 +1,15 @@
+@if (dessert) {
+  <div class="confirmation-list-item">
+    <div class="image-container">
+      <img [src]="dessert.image.thumbnail" [alt]="dessert.name">
+    </div>
+    <div class="text-preset-4-bold name">{{ dessert.name }}</div>
+    <div class="meta">
+      <span class="text-preset-4-bold quantity">{{ dessert.quantity | quantityMultiplier }}</span>
+      <span class="text-preset-4 price">{{ dessert.price | priceFormat }}</span>
+    </div>
+    <div class="text-preset-3 total">
+      {{ dessert.totalPrice | priceFormat }}
+    </div>
+  </div>
+}

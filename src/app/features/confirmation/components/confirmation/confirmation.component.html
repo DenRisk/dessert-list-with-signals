@@ -1,0 +1,12 @@
+<div>
+  <div class="icon-container">
+    <img src="images/icon-order-confirmed.svg" alt="Checkmark">
+  </div>
+  <h1 class="text-preset-1">Order Confirmed</h1>
+  <div class="enjoy-text">We hope you enjoy your food</div>
+  <app-confirmation-list
+    [cartEntries]="cartEntries"
+    [cartTotal]="cartTotal">
+  </app-confirmation-list>
+  <app-button (onConfirmClick)="startNewOrder()">Start New Order</app-button>
+</div>

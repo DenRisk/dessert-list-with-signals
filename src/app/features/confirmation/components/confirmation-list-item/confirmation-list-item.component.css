@@ -1,0 +1,56 @@
+
+.confirmation-list-item {
+  display: grid;
+  grid-template-columns: [c-line-1] 3rem [c-line-2] auto [c-line-3] fit-content(100%) [c-line-4];
+  grid-template-rows: [r-line-1] 1fr [r-line-2] 1fr [r-line-3];
+  column-gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-rose-100);
+}
+
+.image-container {
+  grid-column-start: c-line-1;
+  grid-column-end: c-line-2;
+  grid-row-start: r-line-1;
+  grid-row-end: r-line-3;
+
+  aspect-ratio: 1 / 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.name {
+  grid-column-start: c-line-2;
+  grid-column-end: c-line-3;
+  grid-row-start: r-line-1;
+  grid-row-end: r-line-2;
+}
+
+.meta {
+  grid-column-start: c-line-2;
+  grid-column-end: c-line-3;
+  grid-row-start: r-line-2;
+  grid-row-end: r-line-3;
+}
+
+.total {
+  grid-column-start: c-line-3;
+  grid-column-end: c-line-4;
+  grid-row-start: r-line-1;
+  grid-row-end: r-line-3;
+
+  margin: auto 0;
+}
+
+.quantity {
+  color: var(--color-red);
+  margin-right: 1rem;
+}
+
+.price {
+  color: var(--color-rose-500);
+}

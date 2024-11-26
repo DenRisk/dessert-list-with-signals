@@ -1,0 +1,12 @@
+.confirmation-list {
+  background-color: var(--color-rose-50);
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  align-items: center;
+}

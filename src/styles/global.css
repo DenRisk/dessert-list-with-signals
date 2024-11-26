@@ -36,6 +36,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -73,4 +77,17 @@ select {
     scroll-behavior: auto !important;
     transition: none;
   }
+}
+
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
 }

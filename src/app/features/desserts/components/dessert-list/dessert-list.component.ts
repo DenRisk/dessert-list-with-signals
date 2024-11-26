@@ -1,7 +1,6 @@
-import { Component, computed, effect, inject, Signal } from '@angular/core';
-import { DessertsService } from '../../services/desserts.service';
-import { DessertListItemComponent } from '../dessert-list-item/dessert-list-item.component';
-import {CartService} from '../../../cart/services/cart.service'
+import {Component, computed, effect, inject, Input, Signal} from '@angular/core';
+import {DessertsService} from '../../services/desserts.service';
+import {DessertListItemComponent} from '../dessert-list-item/dessert-list-item.component';
 import {Dessert} from '../../model/dessert'
 
 @Component({
@@ -12,18 +11,20 @@ import {Dessert} from '../../model/dessert'
   standalone: true
 })
 export class DessertListComponent {
+  /** Desserts **/
   dessertService = inject(DessertsService);
-  cartService = inject(CartService);
-
   dessertResource = this.dessertService.getDesserts();
   desserts: Signal<Dessert[]> = computed(() => this.dessertResource.value() ?? []);
+
+  /** Cart Entries **/
+  @Input() cartEntries!: Signal<Dessert[]>;
 
   /**
    * Compute the desserts with their quantity in the cart
    * **/
   dessertsWithQuantity = computed(() => {
     const desserts = this.desserts();
-    const cartEntries = this.cartService.cartEntries();
+    const cartEntries = this.cartEntries();
 
     return desserts.map(dessert => {
       const cartItem = cartEntries.find(entry => entry.id === dessert.id);
@@ -33,10 +34,4 @@ export class DessertListComponent {
       };
     });
   });
-
-  constructor() {
-    effect(() => {
-      console.log('Entries', this.dessertsWithQuantity());
-    });
-  }
 }

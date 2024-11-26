@@ -3,18 +3,22 @@
 }
 
 .image-container {
-  margin-bottom: 2.5rem;
-
   @media (min-width: 576px) {
     height: 250px;
+    margin-bottom: 2.5rem;
   }
 
   img {
+    transition: all 0.05s linear;
     border-radius: 8px;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.image-active {;
+  border: 2px solid var(--color-red);
 }
 
 .category {

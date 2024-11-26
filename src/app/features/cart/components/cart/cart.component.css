@@ -1,0 +1,21 @@
+.cart-title {
+  color: var(--color-red);
+  margin-bottom: 1.5rem;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.cart-carbon-neutral {
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+  background-color: var(--color-rose-50);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}

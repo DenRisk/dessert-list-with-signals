@@ -1,0 +1,45 @@
+.cart-list-item {
+  display: grid;
+  grid-template-columns: [c-line-1] auto [c-line-2] fit-content(100%) [c-line-3];
+  grid-template-rows: [r-line-1] 1fr [r-line-2] 1fr [r-line-3];
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-rose-100);
+}
+
+.name {
+  grid-column-start: c-line-1;
+  grid-column-end: c-line-2;
+
+  grid-row-start: r-line-1;
+  grid-row-end: r-line-2;
+}
+
+.price-calculation {
+  grid-column-start: c-line-1;
+  grid-column-end: c-line-2;
+
+  grid-row-start: r-line-2;
+  grid-row-end: r-line-3;
+}
+
+.remove-btn {
+  margin: auto 0;
+  grid-column-start: c-line-2;
+  grid-column-end: c-line-3;
+
+  grid-row-start: r-line-1;
+  grid-row-end: r-line-3;
+}
+
+.quantity {
+  color: var(--color-red);
+  margin-right: 1rem;
+}
+
+.single-price {
+  margin-right: 0.5rem;
+}
+
+.single-price, .total-price {
+  color: var(--color-rose-500);
+}

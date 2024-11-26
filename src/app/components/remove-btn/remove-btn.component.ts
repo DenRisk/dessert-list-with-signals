@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-remove-btn',
-  imports: [],
   templateUrl: './remove-btn.component.html',
-  styleUrl: './remove-btn.component.css'
+  styleUrls: ['./remove-btn.component.css'],
+  standalone: true,
 })
 export class RemoveBtnComponent {
+  @Input() entryId: string | undefined;
+  @Output() onRemoveEntry = new EventEmitter<string>();
 
+  removeEntry() {
+    this.onRemoveEntry.emit(this.entryId);
+  }
 }

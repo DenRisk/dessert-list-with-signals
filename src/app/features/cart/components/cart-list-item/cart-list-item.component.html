@@ -1,1 +1,16 @@
-<p>cart-list-item works!</p>
+@if (dessert) {
+<div class="cart-list-item">
+  <div class="text-preset-4-bold name">{{dessert.name}}</div>
+  <div class="price-calculation">
+    <span class="text-preset-4-bold quantity">{{dessert.quantity | quantityMultiplier}}</span>
+    <span class="text-preset-4 single-price">{{dessert.price | priceFormat}}</span>
+    <span class="text-preset-4-bold total-price">{{dessert.totalPrice | priceFormat}}</span>
+  </div>
+  <div class="remove-btn">
+    <app-remove-btn
+      [entryId]="dessert.id"
+      (onRemoveEntry)="removeEntry($event)"
+    ></app-remove-btn>
+  </div>
+</div>
+}

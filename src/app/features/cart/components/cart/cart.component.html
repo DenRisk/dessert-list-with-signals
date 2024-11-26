@@ -1,1 +1,16 @@
-<app-cart-empty></app-cart-empty>
+<h3 class="text-preset-2 cart-title">{{ 'Your Cart (' + cartQuantity() + ')' }}</h3>
+@if (cartEntries().length > 0) {
+  <app-cart-list [cartEntries]="cartEntries"></app-cart-list>
+  <div class="cart-total">
+    <span class="text-preset-4">Order Total</span>
+    <span class="text-preset-2">{{ cartTotal() | priceFormat }}</span>
+  </div>
+  <div class="cart-carbon-neutral">
+    <img src="images/icon-carbon-neutral.svg" alt="Tree">
+    <div class="text-preset-4">This is a <strong>carbon-neutral</strong> delivery</div>
+  </div>
+  <app-button (onConfirmClick)="openModal()">Confirm Order</app-button>
+} @else {
+  <app-cart-empty></app-cart-empty>
+}
+
