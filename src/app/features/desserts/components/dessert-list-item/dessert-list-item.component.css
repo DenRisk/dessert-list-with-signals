@@ -3,9 +3,11 @@
 }
 
 .image-container {
+  position: relative;
+  margin-bottom: 2.5rem;
+
   @media (min-width: 576px) {
     height: 250px;
-    margin-bottom: 2.5rem;
   }
 
   img {
