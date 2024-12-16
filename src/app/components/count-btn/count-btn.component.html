@@ -1,6 +1,6 @@
-<div class="count-btn" (click)="changeCount()">
+<button class="count-btn" (click)="changeCount()" [tabIndex]="0">
   <img
     class="icon"
     [src]="countType === 'Increment' ? 'images/icon-increment-quantity.svg' : 'images/icon-decrement-quantity.svg'"
     [alt]="countType === 'Increment' ? 'Increment' : 'Decrement'">
-</div>
+</button>
